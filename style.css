@@ -11,6 +11,7 @@ header {
   background-color: rgba(102, 51, 153, 0.8);
   color: white;
   display: flex;
+  flex-flow: row wrap; /* I don't like how, on very narrow viewports, the nav and h1 don't recenter themselves horizontally when overflowing, but I'm not sure how to achieve that */
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
   font-weight: bold;
@@ -23,6 +24,7 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  flex-flow: row wrap;
 }
 nav ul li {
   padding: 15px;
@@ -47,6 +49,7 @@ section {
   position: relative;
   background-size: cover;
   background-position: center;
+  border-bottom: 2px solid white;
 }
 section:nth-child(1) {
   background-image: url("./img/bg1.webp");
@@ -82,8 +85,8 @@ section:nth-child(3) {
   text-decoration: none;
   display: block;
   width: fit-content;
-  background: plum;
-  border: 3px outset plum;
+  background: mediumpurple;
+  border: 3px outset mediumpurple;
 }
 .cta-box a:hover {
   color: black;
@@ -95,9 +98,32 @@ section:nth-child(3) {
   background: rebeccapurple;
   border: 3px inset rebeccapurple;
 }
+
+.rtt {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+.rtt a {
+  padding: 15px 25px 15px 25px;
+  background: rebeccapurple;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.rtt a:hover {
+  background-color: mediumpurple;
+}
+.rtt a:active {
+  color: rebeccapurple;
+  background: white;
+  border-color: rebeccapurple;
+}
 footer {
   color: white;
-  background: tomato;
+  background-color: rebeccapurple;
   padding: 50px;
 }
 footer p {
