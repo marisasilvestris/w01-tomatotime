@@ -29,8 +29,8 @@
 I tried to plan appropriately before commencing, interacting with the example site and trying to make an estimate as to how it was achieved, then drawing a quick box plan of my idea.
 I put the plan into place in a barebones HTML and CSS block model, and visually compared against the example making rough modifications until I felt the header, nav, main, and footer elements were broadly in place,
 
-Things learned from evaluating against TT source:
-2px border beneath each section.
+Things learned from evaluating against TT source:  
+2px border beneath each section.  
 Smooth scroll behaviour
 
 No idea as of yet how audio can be auto-played without running foul of modern attempts to block doing that, but we'll see.
