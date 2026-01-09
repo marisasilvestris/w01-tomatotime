@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; /* I thought the TT site was doing some funky JS stuff or something, didn't know this feature existed at all, cool! */
+}
 body {
   margin: 0;
   padding: 0;
@@ -17,7 +20,24 @@ header {
   padding: 20px 40px 20px 40px;
   font-weight: bold;
 }
+h3 {
+  color: pal;
+}
 
+h1 {
+  background-image: linear-gradient(
+    to right,
+    palevioletred,
+    orange,
+    palegoldenrod,
+    lightgreen,
+    cyan,
+    cornflowerblue,
+    mediumpurple
+  );
+  background-clip: text;
+  color: transparent;
+} /* gonna admit it, i brought this bit with me, i love rainbow text (also works on strongly-silhoutted emojis!) */
 nav {
   text-transform: uppercase;
 }
