@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: sticky;
+      }
+      nav {
+        text-transform: uppercase;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      nav ul li {
+        padding: 15px;
+      }
+      section {
+        height: 100vh;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+      }
+      section p {
+        color: tomato;
+      }
+      section h2 {
+        color: tomato;
+      }
+      section a {
+        color: white;
+        background: green;
+        padding: 15px;
+      }
+      section:nth-child(1) {
+        background: red;
+      }
+      section:nth-child(2) {
+        background: green;
+      }
+      section:nth-child(3) {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>TomatoTime</h1>
+      <nav>
+        <ul>
+          <li><a href="./#">Home</a></li>
+          <li><a href="./#">About</a></li>
+          <li><a href="./#">Tomatoes</a></li>
+          <li><a href="./#">Timers</a></li>
+          <li><a href="./#">Tote Bags</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="cta-box">
+          <p>Recent fruits</p>
+          <h2>Want tomatoes?</h2>
+          <a href="./#">Buy from us</a>
+        </div>
+      </section>
+      <section>
+        <div class="cta-box">
+          <p>Buy a timer</p>
+          <h2>Timers are ticking!</h2>
+          <a href="./#">Tick tock</a>
+        </div>
+      </section>
+      <section>
+        <div class="cta-box">
+          <p>Give us money</p>
+          <h2>Show everyone you mean it!</h2>
+          <a href="./#">Read more</a>
+        </div>
+      </section>
+    </main>
+    <footer><p>TomatoTime © 2026</p></footer>
+  </body>
+</html>
