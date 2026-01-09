@@ -7,15 +7,15 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  box-sizing: border-box; /* I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
+  box-sizing: border-box; /* [1] I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
   background-color: rgba(102, 51, 153, 0.8);
+  z-index: 999; /* [2] I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */
   color: white;
   display: flex;
-  flex-flow: row wrap; /* I don't like how, on very narrow viewports, the nav and h1 don't recenter themselves horizontally when overflowing, but I'm not sure how to achieve that */
+  flex-flow: row wrap; /* [3] I don't like how, on very narrow viewports, the nav and h1 don't recenter themselves horizontally when overflowing, but I'm not sure how to achieve that */
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
   font-weight: bold;
-  z-index: 999; /* I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */
 }
 
 nav {
@@ -101,17 +101,22 @@ section:nth-child(3) {
 
 .rtt {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 10px;
+  right: 10px;
+  height: fit-content;
+  z-index: 999;
 }
 .rtt a {
-  padding: 15px 25px 15px 25px;
+  padding: 5px 10px 5px 10px;
   background: rebeccapurple;
   border: 1px solid white;
   border-radius: 8px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 0.8em;
+  display: flex;
+  gap: 15px;
 }
 .rtt a:hover {
   background-color: mediumpurple;
@@ -121,12 +126,37 @@ section:nth-child(3) {
   background: white;
   border-color: rebeccapurple;
 }
+.rtt img {
+  align-self: center;
+}
+.rtt p {
+  display: inline-block;
+  text-align: center;
+}
 footer {
   color: white;
   background-color: rebeccapurple;
   padding: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* [4] see below [5] */
 }
 footer p {
-  margin: 0 auto;
-  width: fit-content;
+  margin: 0;
+}
+footer p:nth-child(2) {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  /* [5] i know what i just did was kinda dodgy but i thought it was funny, it broke the Return to Top button and I had to fiddle with z-index again (see [2]) */
+}
+.social {
+  padding: 0;
+  align-self: flex-start;
+}
+.social a {
 }
