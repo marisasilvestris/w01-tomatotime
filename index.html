@@ -10,10 +10,22 @@
       body {
         margin: 0;
         padding: 0;
+        font-family: sans-serif;
       }
       header {
-        position: sticky;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box; /* I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
+        background-color: rgba(255, 99, 71, 0.8);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px 20px 40px;
+        font-weight: bold;
+        z-index: 999; /* I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency? i remember reading about this but can't find it */
       }
+
       nav {
         text-transform: uppercase;
       }
@@ -24,22 +36,24 @@
       nav ul li {
         padding: 15px;
       }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        padding: 0;
+        margin: 0;
+      }
       section {
         height: 100vh;
         text-transform: uppercase;
         margin: 0;
         padding: 0;
-      }
-      section p {
-        color: tomato;
-      }
-      section h2 {
-        color: tomato;
-      }
-      section a {
-        color: white;
-        background: green;
-        padding: 15px;
+        position: relative;
       }
       section:nth-child(1) {
         background: red;
@@ -49,6 +63,43 @@
       }
       section:nth-child(3) {
         background: blue;
+      }
+
+      .cta-box {
+        background: white;
+        width: fit-content;
+        padding: 20px;
+        position: absolute;
+        bottom: 100px;
+        left: 50px;
+      }
+      .cta-box p {
+        margin: 0;
+        font-size: 1.4em;
+        color: tomato;
+      }
+      .cta-box h2 {
+        font-size: 2.5em;
+        color: tomato;
+        margin-top: 10px;
+      }
+      .cta-box a {
+        color: white;
+        background: green;
+        padding: 15px 30px 15px 30px;
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+      }
+
+      footer {
+        color: white;
+        background: tomato;
+        padding: 50px;
+      }
+      footer p {
+        margin: 0 auto;
+        width: fit-content;
       }
     </style>
   </head>
