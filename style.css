@@ -10,18 +10,15 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  box-sizing: border-box; /* [1] I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
+  box-sizing: border-box; /* I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
   background-color: rgba(102, 51, 153, 0.8);
-  z-index: 999; /* [2] I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */
+  z-index: 999; /* I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */ /* DOUBLE COMMENT: I just checked the TomatoTime source and it uses z-index:1;, so I'm hoping this is intended and fine behaviour */
   color: white;
   display: flex;
-  flex-flow: row wrap; /* [3] I don't like how, on very narrow viewports, the nav and h1 don't recenter themselves horizontally when overflowing, but I'm not sure how to achieve that */
+  flex-flow: row wrap; /* I don't like how, on very narrow viewports, the nav and h1 don't rejustify themselves correctly horizontally when overflowing, but I'm not sure how to achieve that */
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
   font-weight: bold;
-}
-h3 {
-  color: pal;
 }
 
 h1 {
@@ -37,7 +34,7 @@ h1 {
   );
   background-clip: text;
   color: transparent;
-} /* gonna admit it, i brought this bit with me, i love rainbow text (also works on strongly-silhoutted emojis!) */
+} /* gonna admit it, i brought this bit with me, i love rainbow text (works on strongly-silhoutted emojis!) */
 nav {
   text-transform: uppercase;
 }
@@ -177,7 +174,7 @@ footer {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* [4] see below [5] */
+  position: relative; /* see below */
 }
 footer p {
   margin: 0;
@@ -185,9 +182,11 @@ footer p {
 footer p:nth-child(2) {
   position: absolute;
   bottom: 15px;
+  left: 0;
   width: 100%;
+  box-sizing: border-box;
   text-align: center;
-  /* [5] i know what i just did was kinda dodgy but i thought it was funny, it broke the Return to Top button and I had to fiddle with z-index again (see [2]) */
+  /* i know what i just did was kinda dodgy but i thought it was funny, it broke the Return to Top button and I had to fiddle with z-index again (see above) */
 }
 .social {
   padding: 0;
