@@ -60,6 +60,21 @@ section:nth-child(2) {
 section:nth-child(3) {
   background-image: url("./img/bg3.webp");
 }
+section:nth-child(4) {
+  background-image: url("./img/bg4.webp");
+}
+section:nth-child(5) {
+  background-image: url("./img/bg5.webp");
+}
+section:nth-child(6) {
+  background-image: url("./img/bg6.webp");
+}
+section:nth-child(7) {
+  background-image: url("./img/bgsecret.webp");
+}
+section:last-of-type {
+  background-image: url("./img/bg7.webp");
+}
 
 .cta-box {
   background: white;
@@ -157,6 +172,4 @@ footer p:nth-child(2) {
 .social {
   padding: 0;
   align-self: flex-start;
-}
-.social a {
 }
