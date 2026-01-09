@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box; /* I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
+  background-color: rgba(102, 51, 153, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px 20px 40px;
+  font-weight: bold;
+  z-index: 999; /* I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */
+}
+
+nav {
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  padding: 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+section {
+  height: 100vh;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+section:nth-child(1) {
+  background-image: url("./img/bg1.webp");
+}
+section:nth-child(2) {
+  background-image: url("./img/bg2.webp");
+}
+section:nth-child(3) {
+  background-image: url("./img/bg3.webp");
+}
+
+.cta-box {
+  background: white;
+  width: fit-content;
+  padding: 20px;
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+}
+.cta-box p {
+  margin: 0;
+  font-size: 1.4em;
+  color: rebeccapurple;
+}
+.cta-box h2 {
+  font-size: 2.5em;
+  color: rebeccapurple;
+  margin-top: 10px;
+}
+.cta-box a {
+  color: white;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  background: plum;
+  border: 3px outset plum;
+}
+.cta-box a:hover {
+  color: black;
+  background: lavender;
+  border: 3px outset lavender;
+}
+.cta-box a:active {
+  color: white;
+  background: rebeccapurple;
+  border: 3px inset rebeccapurple;
+}
+footer {
+  color: white;
+  background: tomato;
+  padding: 50px;
+}
+footer p {
+  margin: 0 auto;
+  width: fit-content;
+}
