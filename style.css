@@ -27,6 +27,10 @@ header {
   align-items: center;
 }
 
+audio {
+  height: 2em;
+}
+
 h1 {
   background-image: linear-gradient(
     to right,
@@ -39,8 +43,9 @@ h1 {
     mediumpurple
   );
   background-clip: text;
-  color: transparent;
-} /* gonna admit it, i brought this bit with me, i love rainbow text (works on strongly-silhoutted emojis!) */
+  color: transparent; /* gonna admit it, i brought this bit with me, i love rainbow text (works on strongly-silhoutted emojis!) */
+  margin: 0;
+}
 nav {
   text-transform: uppercase;
 }
@@ -49,9 +54,8 @@ nav ul {
   list-style: none;
   flex-flow: row wrap;
   padding: 0;
-}
-nav ul li {
-  padding: 15px;
+  margin: 15px 0 15px 0;
+  gap: 15px;
 }
 nav ul li a {
   color: white;
