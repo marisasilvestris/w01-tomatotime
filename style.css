@@ -181,10 +181,6 @@ section:last-of-type {
 .rtt img {
   align-self: center; /* had to do this to prevent the image stretching vertically, but i'm not sure why??? */
 }
-.rtt p {
-  display: inline-block;
-  text-align: center;
-}
 
 footer {
   color: white;
