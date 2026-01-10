@@ -8,12 +8,17 @@ var count = 0;
 
 html.addEventListener(`keyup`, function (event) {
   console.log(event.key);
+
+  meowSound.load();
+  meowSound.play();
+
   if (event.key == `c`) {
     const section = document.createElement(`section`);
-    main.appendChild(section);
     count = count + 1;
     if (count >= 5) {
       secretMessage.textContent = `I have nothing else to give!`;
+    } else {
+      main.appendChild(section);
     }
     // console.log(count);
 
@@ -26,8 +31,6 @@ html.addEventListener(`keyup`, function (event) {
     /* really want to see if i could auto-scroll to the newly-opened section, alas not yet */
 
     secretMessage.style.display = `block`;
-    meowSound.load();
-    meowSound.play();
     console.log(`Secret Unlocked!`);
   }
 });
