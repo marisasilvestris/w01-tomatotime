@@ -12,6 +12,11 @@ header {
   width: 100%;
   box-sizing: border-box; /* I feel like this line and the one above are a bit of a cheeky workaround, rather than having just planned it better from the beginning? */
   background-color: rgba(102, 51, 153, 0.8);
+  background-image: linear-gradient(
+    to right,
+    rgba(102, 51, 153, 0.8),
+    rgba(102, 51, 153, 0)
+  );
   z-index: 999; /* I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */ /* DOUBLE COMMENT: I just checked the TomatoTime source and it uses z-index:1;, so I'm hoping this is intended and fine behaviour */
   color: white;
   display: flex;
@@ -19,6 +24,7 @@ header {
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
   font-weight: bold;
+  align-items: center;
 }
 
 h1 {
@@ -42,6 +48,7 @@ nav ul {
   display: flex;
   list-style: none;
   flex-flow: row wrap;
+  padding: 0;
 }
 nav ul li {
   padding: 15px;
@@ -88,6 +95,15 @@ section:nth-child(6) {
 }
 section:nth-child(7) {
   background-image: url("./img/bgsecret.webp");
+}
+section:nth-child(8) {
+  background-image: url("./img/bgsecret2.webp");
+}
+section:nth-child(9) {
+  background-image: url("./img/bgsecret3.webp");
+}
+section:nth-child(10) {
+  background-image: url("./img/bgsecret4.webp");
 }
 section:last-of-type {
   background-image: url("./img/bg7.webp");
@@ -159,12 +175,13 @@ section:last-of-type {
   border-color: rebeccapurple;
 }
 .rtt img {
-  align-self: center;
+  align-self: center; /* had to do this to prevent the image stretching vertically, but i'm not sure why??? */
 }
 .rtt p {
   display: inline-block;
   text-align: center;
 }
+
 footer {
   color: white;
   background-color: rebeccapurple;
@@ -191,4 +208,17 @@ footer p:nth-child(2) {
 .social {
   padding: 0;
   align-self: flex-start;
+}
+
+#secretmessage {
+  display: none;
+  /* display: block; */
+  position: fixed;
+  top: 50%;
+  z-index: 1;
+  color: white;
+  font-size: 8em;
+  background-color: rgba(255, 0, 0, 0.3);
+  text-align: center;
+  width: 100vw;
 }

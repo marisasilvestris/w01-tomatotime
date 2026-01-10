@@ -14,7 +14,8 @@
 - ✔️ Implement smooth scrolling for internal links to improve user experience.
 - ✔️ Implement a hover effect on buttons to make them more interactive.
 - ✔️ Create a basic footer with social media icons that link to social media pages.
-- ❓ Add a background music track that plays automatically when the website loads.
+- ✔️ Add a background music track that plays automatically when the website loads.
+- ✔️ A lil' secret or two???
 
 ## Reflection
 
@@ -27,13 +28,16 @@ Here I realised
 After that, it was a matter of small adjustments until
 
 Things learned from evaluating against TT source:  
-2px border beneath each section.  
-Smooth scroll behaviour
+2px border beneath each section, had completely missed it.  
+Smooth scroll behaviour.
 
-No idea as of yet how audio can be auto-played without running foul of modern attempts to block doing that, but we'll see.
+Third-party resources used:  
+Thanks to w3schools of all places for audio autoplay functionality info, and MDN for further reading.
 
-I've stuck annotations in the CSS file for some on-the-spot head-scratching nonsense, feel free to check 'em out.
+I've stuck a good deal of annotations in the CSS file for some on-the-spot head-scratching nonsense, feel free to check 'em out.
 
 Honestly, after feeling like I had a bit of a stumbling start this week, I'm happier than I thought I'd be with it so far
 
 ## To improve
+
+I should probably just research better, for a start. There's no shame in taking a look at the original source to begin with to make sure I'm setting off on the right foot, since I lost a decent amount of time to re-jigging.
