@@ -1,16 +1,21 @@
 console.log(`testing testing`);
-// window.scrollTo(5000, 5000); /* okay i'm not even gonna try */
 
 const html = document.querySelector(`html`);
 const main = document.querySelector(`main`);
 const secretMessage = document.getElementById(`secretmessage`);
 const meowSound = document.getElementById(`meow`);
+var count = 0;
 
 html.addEventListener(`keyup`, function (event) {
   console.log(event.key);
   if (event.key == `c`) {
     const section = document.createElement(`section`);
     main.appendChild(section);
+    count = count + 1;
+    if (count >= 5) {
+      secretMessage.textContent = `I have nothing else to give!`;
+    }
+    // console.log(count);
 
     // window.scrollTo(
     //   0,
@@ -18,11 +23,7 @@ html.addEventListener(`keyup`, function (event) {
     //     window.scrollY +
     //     section.y
     // );
-    console.log(
-      document.getElementById(`section7`).getBoundingClientRect().y +
-        window.scrollY +
-        section
-    );
+    /* really want to see if i could auto-scroll to the newly-opened section, alas not yet */
 
     secretMessage.style.display = `block`;
     meowSound.load();

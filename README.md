@@ -40,4 +40,5 @@ Honestly, after feeling like I had a bit of a stumbling start this week, I'm hap
 
 ## To improve
 
-I should probably just research better, for a start. There's no shame in taking a look at the original source to begin with to make sure I'm setting off on the right foot, since I lost a decent amount of time to re-jigging.
+I should probably just research better, for a start. There's no shame in taking a look at the original source to begin with to make sure I'm setting off on the right foot, since I lost a decent amount of time to re-jigging.  
+Flexbox still melts my brain a little, grid will be even worse when we get to it, I get confused about the main/cross-axis specifics. I also get very muddled on which properties are applied to the parent or child.

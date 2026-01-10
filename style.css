@@ -75,34 +75,34 @@ section {
   background-position: center;
   border-bottom: 2px solid white;
 }
-section:nth-child(1) {
+section:nth-of-type(1) {
   background-image: url("./img/bg1.webp");
 }
-section:nth-child(2) {
+section:nth-of-type(2) {
   background-image: url("./img/bg2.webp");
 }
-section:nth-child(3) {
+section:nth-of-type(3) {
   background-image: url("./img/bg3.webp");
 }
-section:nth-child(4) {
+section:nth-of-type(4) {
   background-image: url("./img/bg4.webp");
 }
-section:nth-child(5) {
+section:nth-of-type(5) {
   background-image: url("./img/bg5.webp");
 }
-section:nth-child(6) {
+section:nth-of-type(6) {
   background-image: url("./img/bg6.webp");
 }
-section:nth-child(7) {
-  background-image: url("./img/bgsecret.webp");
+section:nth-of-type(7) {
+  background-image: url("./img/bgsecret1.webp");
 }
-section:nth-child(8) {
+section:nth-of-type(8) {
   background-image: url("./img/bgsecret2.webp");
 }
-section:nth-child(9) {
+section:nth-of-type(9) {
   background-image: url("./img/bgsecret3.webp");
 }
-section:nth-child(10) {
+section:nth-of-type(10) {
   background-image: url("./img/bgsecret4.webp");
 }
 section:last-of-type {
@@ -151,7 +151,6 @@ section:last-of-type {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  height: fit-content;
   z-index: 999;
 }
 .rtt a {
