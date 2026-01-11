@@ -4,33 +4,31 @@ const html = document.querySelector(`html`);
 const main = document.querySelector(`main`);
 const secretMessage = document.getElementById(`secretmessage`);
 const meowSound = document.getElementById(`meow`);
-var count = 0;
+let count = 0;
 
-html.addEventListener(`keyup`, function (event) {
-  console.log(event.key);
+html.addEventListener(`keydown`, function (event) {
+  // console.log(event.key);
 
   meowSound.load();
   meowSound.play();
 
   if (event.key == `c`) {
-    const section = document.createElement(`section`);
     count = count + 1;
+
     if (count >= 5) {
       secretMessage.textContent = `I have nothing else to give!`;
     } else {
-      main.appendChild(section);
+      const section =
+        document.createElement(
+          `section`
+        ); /* tbh i'm not sure how this works. is the const destroyed after each event is run, so it can be remade anew each subsequent event? is this the right place to declare it, or should it be in a lower or higher function for best practice? */
+      section.id = `section` + (count + 7);
+      main.lastElementChild.after(section);
+      section.scrollIntoView(); /* I had so much trouble with this, considering how simple the solution was. */
     }
     // console.log(count);
 
-    // window.scrollTo(
-    //   0,
-    //   document.getElementById(`section7`).getBoundingClientRect().y +
-    //     window.scrollY +
-    //     section.y
-    // );
-    /* really want to see if i could auto-scroll to the newly-opened section, alas not yet */
-
-    secretMessage.style.display = `block`;
+    secretMessage.style.display = `block`; /* Unhide */
     console.log(`Secret Unlocked!`);
   }
 });

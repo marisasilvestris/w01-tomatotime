@@ -20,7 +20,7 @@ header {
   z-index: 999; /* I'm not sure why I have to do this??? otherwise it's behind the section elements. i think it's the transparency and something about 't h e   s t a c k~~'? i remember reading about this but can't find it */ /* DOUBLE COMMENT: I just checked the TomatoTime source and it uses z-index:1;, so I'm hoping this is intended and fine behaviour */
   color: white;
   display: flex;
-  flex-flow: row wrap; /* I don't like how, on very narrow viewports, the nav and h1 don't rejustify themselves correctly horizontally when overflowing, but I'm not sure how to achieve that */
+  flex-flow: row wrap; /* I'd like to figure out how to rejustify things to the center after this flex has overflowed */
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
   font-weight: bold;
@@ -32,18 +32,6 @@ audio {
 }
 
 h1 {
-  background-image: linear-gradient(
-    to right,
-    palevioletred,
-    orange,
-    palegoldenrod,
-    lightgreen,
-    cyan,
-    cornflowerblue,
-    mediumpurple
-  );
-  background-clip: text;
-  color: transparent; /* gonna admit it, i brought this bit with me, i love rainbow text (works on strongly-silhoutted emojis!) */
   margin: 0;
 }
 nav {
@@ -220,9 +208,23 @@ footer p:nth-child(2) {
   position: fixed;
   top: 50%;
   z-index: 1;
-  color: white;
   font-size: 8em;
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(102, 51, 153, 0.8);
   text-align: center;
   width: 100vw;
+}
+
+.rainbow {
+  background-image: linear-gradient(
+    to right,
+    palevioletred,
+    orange,
+    palegoldenrod,
+    lightgreen,
+    cyan,
+    cornflowerblue,
+    mediumpurple
+  );
+  background-clip: text;
+  color: transparent; /* gonna admit it, i brought this bit with me, i love rainbow text (works on strongly-silhoutted emojis!) */
 }
