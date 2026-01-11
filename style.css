@@ -99,19 +99,23 @@ section:nth-of-type(6) {
   background-image: url("./img/bg6.webp");
 }
 section:nth-of-type(7) {
-  background-image: url("./img/bgsecret1.webp");
+  background-image: url("./img/bg7.webp");
 }
 section:nth-of-type(8) {
-  background-image: url("./img/bgsecret2.webp");
+  background-image: url("./img/bgsecret1.webp");
+  border: 1px solid black;
 }
 section:nth-of-type(9) {
-  background-image: url("./img/bgsecret3.webp");
+  background-image: url("./img/bgsecret2.webp");
+  border: 1px solid black;
 }
 section:nth-of-type(10) {
-  background-image: url("./img/bgsecret4.webp");
+  background-image: url("./img/bgsecret3.webp");
+  border: 1px solid black;
 }
-section:last-of-type {
-  background-image: url("./img/bg7.webp");
+section:nth-of-type(11) {
+  background-image: url("./img/bgsecret4.webp");
+  border: 1px solid black;
 }
 
 .cta-box {
